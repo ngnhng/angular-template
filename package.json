@@ -7,6 +7,7 @@
 	],
 	"type": "module",
 	"scripts": {
+		"start": "pnpm --filter onboard start",
 		"build": "pnpm run --r --if-present build",
 		"docs": "typedoc --logLevel Verbose",
 		"docs-watch": "typedoc --watch",
@@ -23,6 +24,7 @@
 		"inspect": "node-modules-inspector"
 	},
 	"devDependencies": {
+		"@angular/cli": "^21.0.0",
 		"@types/node": "catalog:typescript",
 		"@vitest/coverage-v8": "catalog:voidzero",
 		"@vitest/ui": "catalog:voidzero",
