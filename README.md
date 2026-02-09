@@ -46,18 +46,18 @@ pnpm run ng generate component my-component
 
 ## Workspace commands (root)
 
-| Command | Description |
-| --- | --- |
-| `pnpm run start` | Start the `onboard` Angular app |
-| `pnpm run build` | Build all workspace projects that expose `build` |
-| `pnpm run test` | Run Vitest with coverage |
-| `pnpm run test-ci` | Run Vitest once for CI with coverage |
-| `pnpm run test-ui` | Open Vitest UI |
-| `pnpm run fmt` | Format with Oxfmt |
-| `pnpm run fmt-ci` | Check formatting |
-| `pnpm run lint` | Lint with Oxlint |
-| `pnpm run fix` | Apply Oxlint fixes |
-| `pnpm run docs` | Generate TypeDoc docs |
+| Command            | Description                                      |
+| ------------------ | ------------------------------------------------ |
+| `pnpm run start`   | Start the `onboard` Angular app                  |
+| `pnpm run build`   | Build all workspace projects that expose `build` |
+| `pnpm run test`    | Run Vitest with coverage                         |
+| `pnpm run test-ci` | Run Vitest once for CI with coverage             |
+| `pnpm run test-ui` | Open Vitest UI                                   |
+| `pnpm run fmt`     | Format with Oxfmt                                |
+| `pnpm run fmt-ci`  | Check formatting                                 |
+| `pnpm run lint`    | Lint with Oxlint                                 |
+| `pnpm run fix`     | Apply Oxlint fixes                               |
+| `pnpm run docs`    | Generate TypeDoc docs                            |
 
 ## Adding code
 

@@ -1,0 +1,63 @@
+<section class="panel">
+	<header class="panel-header">
+		<div>
+			<h1>Onboard API Demo</h1>
+			<p>Calls generated OpenAPI client for registration forms.</p>
+		</div>
+		<div class="actions">
+			<button
+				type="button"
+				(click)="store.refreshForms()"
+				[disabled]="store.loading() || store.creating()"
+			>
+				{{ store.loading() ? 'Loading...' : 'Refresh forms' }}
+			</button>
+			<button
+				type="button"
+				(click)="store.createSampleForm()"
+				[disabled]="store.loading() || store.creating()"
+			>
+				{{ store.creating() ? 'Creating...' : 'Create sample form' }}
+			</button>
+		</div>
+	</header>
+
+	@if (store.lastCreatedId()) {
+		<p class="notice">
+			Created form ID: <code>{{ store.lastCreatedId() }}</code>
+		</p>
+	}
+
+	@if (store.error()) {
+		<p class="error">{{ store.error() }}</p>
+	}
+
+	@if (store.forms().length === 0 && !store.loading()) {
+		<p class="empty">No forms returned yet.</p>
+	}
+
+	@if (store.forms().length > 0) {
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Reference</th>
+					<th>Status</th>
+					<th>Product</th>
+					<th>Updated</th>
+				</tr>
+			</thead>
+			<tbody>
+				@for (form of store.forms(); track form.id ?? $index) {
+					<tr>
+						<td>{{ form.id ?? '-' }}</td>
+						<td>{{ form.referenceNo ?? '-' }}</td>
+						<td>{{ form.status ?? '-' }}</td>
+						<td>{{ form.productCode ?? '-' }}</td>
+						<td>{{ form.updatedAt ?? '-' }}</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	}
+</section>
