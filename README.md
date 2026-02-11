@@ -1,10 +1,12 @@
-# Angular Monorepo Template
+# Frontend Onboard (Angular + React)
 
-This repository is a PNPM workspace centered on an Angular application, with shared TypeScript packages alongside it.
+This workspace contains two frontend apps under `apps/`:
+
+- `angular-onboard` (Angular 21)
+- `react-onboard` (React 19 + Vite + Tailwind v4)
 
 ## What this template includes
 
-- Angular app in `apps/onboard` (Angular CLI 21)
 - Workspace package support in `packages/*` for reusable libraries/utilities
 - Strict TypeScript setup
 - Vitest + coverage at workspace level
